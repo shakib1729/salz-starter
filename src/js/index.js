@@ -114,7 +114,7 @@ const controlRecipe = async () => {
 		recipeView.renderRecipe(state.recipe, state.likes.isLiked(id)); 
 
         } catch(error){
-        	alert('Error processing data');
+        	//console.log('Error processing data');
         }
 
 	}
@@ -231,7 +231,7 @@ elements.recipe.addEventListener('click', e =>{
 		state.recipe.updateServings('inc');
 		recipeView.updateServingsIngredients(state.recipe);
 
-   } else if(e.target.matches('.recipe__btn--add, recipe__btn--add *')) {   // to add new items to the shopping list // if target matches button add or any child element of button add
+   } else if(e.target.matches('.recipe__btn--add, .recipe__btn--add *')) {   // to add new items to the shopping list // if target matches button add or any child element of button add
    		  controlList();
    } else if(e.target.matches('.recipe__love, .recipe__love *')){  // when 'like'(heart) button is clicked
    		// Like Controller

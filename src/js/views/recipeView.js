@@ -27,7 +27,7 @@ const formatCount = count =>{  // to format the numbers count =2.5 --> 2 1/2
 
 
     }
-   return '?';
+   return '1';
 };
 
 

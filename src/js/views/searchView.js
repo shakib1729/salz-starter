@@ -16,8 +16,13 @@ export const highlightSelected = id => { // highlight the selected recipe on the
 	resultsArr.forEach(el => {
 		el.classList.remove('results__link--active'); // first, we remove that 'results__link--active' class from all the elements , then add that class to the required element
 	});
+  
+   const flag = document.querySelector(`.results__link[href*="${id}"]`);  // to check if the item to be highlighted is present on the left side in the search results
 
-	document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active'); // we select that href element inside of 'results__link' class in which hash is the id , then highlight that
+   if(flag){
+   	  	document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active'); // we select that href element inside of 'results__link' class in which hash is the id , then highlight that 	
+   }
+  
 };
 
 export const limitRecipeTitle = (title, limit=17) => { // we want all the recipe titles in a single line
